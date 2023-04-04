@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* fonts */
+
+  --font-weight-min: 400;
+  --font-weight-regular: 500;
+  --font-weight-bold: 600;
+  --font-weight-max: 700;
+  --font-size-body: 16px;
+
+  /* colors */
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+
+  --accent-blue: hsl(248, 32%, 49%);
+
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: Poppins;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+}
+
+/* ##############
+--main container--
+#################*/
+
+.main-container {
+  margin: auto;
+  width: 375px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 9rem 3rem 6rem 3rem;
+  background: var(--primary-red);
+  background-image: url("./public/img/bg-intro-mobile.png");
+}
+
+@media screen and (min-width: 990px) {
+  .main-container {
+    grid-template-columns: [first] 1fr [second]1fr;
+    grid-template-rows: [one] 16rem [two] 1fr;
+    padding: 4rem 3rem 3rem 3rem;
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+    background-image: url("./public/img/bg-intro-desktop.png");
+  }
+}
+/* ##############
+---- main text -----
+#################*/
+
+.txt {
+  margin: 1rem;
+}
+
+.txt h2 {
+  font-size: 30px;
+  font-weight: var(--font-weight-max);
+  color: white;
+  text-align: center;
+}
+
+.txt p {
+  margin: 2.5rem -1rem;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 3rem;
+  font-weight: var(--font-weight-regular);
+}
+
+@media screen and (min-width: 990px) {
+  .txt {
+    margin: 3rem 7rem 6rem 9rem;
+    grid-row: two;
+    top: 300rem;
+  }
+  .txt h2 {
+    text-align: left;
+    font-size: 50px;
+  }
+  .txt p {
+    text-align: left;
+    margin: 3rem -1rem auto 0;
+  }
+}
+
+/* ##############
+----offer banner-----
+#################*/
+
+.offer {
+  margin: 2rem 1rem;
+  padding: 1rem 5rem 1rem 5rem;
+  width: 30rem;
+  height: 9rem;
+  border-radius: 10px;
+  text-align: center;
+  background: var(--accent-blue);
+  box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+}
+
+.offer p {
+  padding: 1rem;
+  color: white;
+  font-size: 16px;
+  font-weight: var(--font-weight-min);
+  line-height: 2.5rem;
+}
+.offer span {
+  font-weight: var(--font-weight-max);
+  color: white;
+}
+
+@media screen and (min-width: 990px) {
+  .offer {
+    grid-column: second;
+
+    margin: 2rem 1rem 1rem 1rem;
+    padding: 1rem 2rem;
+    width: 44rem;
+    height: 7rem;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--accent-blue);
+    box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ##############
+----  form   -----
+#################*/
+
+.form {
+  margin: 2rem 1rem;
+  padding: 1rem 2rem;
+  width: 30rem;
+  height: 43rem;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  margin: 1rem;
+  padding: 1.5rem 1rem;
+  width: 25rem;
+  font-family: Poppins;
+  font-weight: var(--font-weight-bold);
+  border-color: rgba(0, 0, 0, 0.109);
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 990px) {
+  .form {
+    grid-column: second;
+    grid-row: 2fr;
+    margin: -4rem 1rem -1rem;
+    padding: 1rem 1rem;
+    width: 44rem;
+    height: 42rem;
+  }
+  .input {
+    margin: 1rem;
+    padding: 1.5rem 1rem;
+    width: 35rem;
+  }
+}
+
+/* ##############
+----  button -----
+#################*/
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 25rem;
+  height: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-max);
+  background: var(--primary-green);
+  color: white;
+  box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 990px) {
+  .btn {
+    margin: 1rem;
+    padding: 1rem;
+    width: 35rem;
+    height: 5rem;
+  }
+}
+
+/* ##############
+--terms and services--
+#################*/
+.terms-txt {
+  margin: 1rem 2rem;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 1.5rem;
+  font-weight: var(--font-weight-regular);
+}
+.link {
+  margin: 1rem;
+  color: var(--primary-red);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 990px) {
+  .terms-txt {
+    margin: 1rem;
+    margin-left: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .link {
+    margin: 1rem;
+  }
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
